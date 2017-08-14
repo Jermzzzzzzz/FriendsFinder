@@ -1,25 +1,24 @@
-app.post(/friends, rew. res){
- //temp best friends
-    var bestFriend = {
-        name: '',
-        photo: '',
-        difference: Infinity
-    }
-    
-    var me = req.body;
-    loop through db of friends {
-        var totaldiff = 0; 
-        var currentFriend = friends[i]
-        var J = 0 loop through scores  currentFriend.scores j++
-            currentFriendScore = currentFriends.scores[j];
-            me.scorescurrentFriendScore - me.score
-            Abs(currentFriendScore - me.score)
-            if(totaldif < bestFriend.difference) TRUE FIRST TimeRanges
-                bestFriend.name = currentFriend.name
+//dependent stuff
+var express = require('express');
+var bodyParser = require('body-parser');
 
-    }
 
-    
-}
+// app inititaliation
+var app = express
 
-//   WISHES = EATDABURGER
+//PORT
+var Port = 3000
+
+//Parsing etc..
+app.use(bodyParser.json()));
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type:'application/vnd.api.json'}));
+app.use(express.static(_dirname + '/app/public'));
+
+//Routing
+require('./app/routing/apitRoutes')(app);
+require('./app/routing/htmlRoutes.')(app);
+
+//LISTEN!
+app.listen(port);

@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Jermzzzzzzz/FriendsFinder/issues"
   },
-  "homepage": "https://github.com/Jermzzzzzzz/FriendsFinder#readme"
+  "homepage": "https://github.com/Jermzzzzzzz/FriendsFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {}
 }
